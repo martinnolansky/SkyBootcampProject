@@ -1,0 +1,25 @@
+@font-face{
+  font-family: trial;
+  src: url('SKYTEXT-REGULAR.TTF');
+  font-weight: bold;}
+  
+
+.site_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 10px solid black;
+  }
+
+  img {
+    width: 60px; /* update this to diffrent units */
+  }
+
+  .footer {
+    border-top: 10px solid black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;   
+  text-align: center;
+}

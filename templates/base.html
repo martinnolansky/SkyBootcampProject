@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Sky Bootcamp Group Project</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='/main_styles.css') }}">
+  </head>
+  <body>
+    <header class="site_header">
+      <a href="#" class="header_logo"><img src="/static/sky_logo.png" alt="Sky UK Logo"></a>
+      <nav class="nav">
+        <h1>Sky Group Project</h1></nav> 
+    </header>
+    {% block content %}
+    {% endblock %}
+    <p>The SkyText font needs updated in css file.</p>
+    <div class="footer">
+      <p>Footer</p>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
