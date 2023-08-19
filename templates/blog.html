@@ -1,15 +1,15 @@
 {% extends "base.html"%} {% block content %}
-<h3> Home page - <a href="/">Home</a>
-<h2>Welcome to this blog</h2>
-<p>I am {{author}}, the author of this blog</p>
+<h3>
+  Home page - <a href="/">Home</a>
+  <h2>Welcome to this blog</h2>
+  <p>I am {{author}}, the author of this blog</p>
 
-{% if sunny %}
-<p>Today is sunny</p>
-{% else %}
-<p>Today it is raining</p>
-{% endif %} {% for post in posts%}
-<h2>{{post.title}}</h2>
-<h3>Author: {{post.author}}</h3>
-{% endfor %} 
-
-    {% endblock %}
+  {% if sunny %}
+  <p>Today is sunny</p>
+  {% else %}
+  <p>Today it is raining</p>
+  {% endif %} {% for post in posts%}
+  <h2>{{post.title}}</h2>
+  <h3>Author: {{post.author}}</h3>
+  {% endfor %} {% endblock %}
+</h3>

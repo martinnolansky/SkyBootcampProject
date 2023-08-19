@@ -16,9 +16,9 @@ def blog():
      {'title': 'Technology in 2022', 'author': 'Nolan'}]
     return render_template('blog.html', author = "Martin", sunny=True, posts=posts)
 
-@app.route('/blog/<string:blog_id>') # Specify the blog ID will be a variable in the url
-def blogpost(blog_id):
-    return 'This is blog post number ' + blog_id
+@app.errorhandler(404)
+def pageNotFound(e):
+    return render_template('404.html'), 404
 
 if __name__ == '__main__':
     app.run()
