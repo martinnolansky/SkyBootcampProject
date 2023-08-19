@@ -1,63 +1,60 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Sky Bootcamp Group Project</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for('static',filename='/main_styles.css') }}"
-    />
-    <script src="{{url_for('static', filename='/script.js') }}"></script>
-  </head>
 
-  <body>
-    <!-- Clickable logo that redirects to home page-->
-    <header class="site_header">
-      <a href="/" class="header_logo"
-        ><img src="/static/sky_logo.png" alt="Sky UK Logo"
-      /></a>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Sky Bootcamp Group Project</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='/main_styles.css') }}" />
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+  <script src="{{url_for('static', filename='/script.js') }}"></script>
+</head>
 
-      <!-- Nav bar for log in functionality -->
-      <nav class="nav">
-        <h1>Sky Group Project</h1>
-      </nav>
-    </header>
+<body>
+  <!-- Clickable logo that redirects to home page-->
+  <header class="site_header">
+    <a href="/" class="header_logo"><img src="/static/sky_logo.png" alt="Sky UK Logo" /></a>
 
-    <!-- Content from other templates added here -->
-    {% block content %} {% endblock %}
+    <!-- Nav bar for log in functionality -->
+    <nav class="nav">
+      <h1>Sky Group Project</h1>
+    </nav>
+  </header>
 
-    <p>This is written using SkyText.</p>
+  <!-- Content from other templates added here -->
+  {% block content %} {% endblock %}
 
-    <!-- Chat button that opens pop up below -->
+  <!-- Chat button that opens pop up below -->
+  <div class="chatBtn">
     <button class="openButton" onclick="openForm()">Chat</button>
+  </div>
 
-    <!-- Chat popup with message box, submit and close button -->
-    <div class="chatPopup" id="chatForm">
-      <form action="/" class="formContainer">
-        <div class="flexContainer">
-          <div class="flexChild">
-            <h1>Chat</h1>
-          </div>
-          <div class="flexChild">
-            <button type="button" class="btn cancel" onclick="closeForm()">
-              Close
-            </button>
-          </div>
+  <!-- Chat popup with message box, submit and close button -->
+  <div class="chatPopup" id="chatForm">
+    <form action="/" class="formContainer">
+      <div class="flexContainer">
+        <div class="flexChild">
+          <h2>Sky Assist</h2>
         </div>
+        <div class="flexChild">
+          <button type="button" class="buttons cancel" onclick="closeForm()">
+            Close
+          </button>
+        </div>
+      </div>
 
-        <label for="msg"><b>Message</b></label>
-        <textarea placeholder="Type message.." name="msg" required></textarea>
-        <button type="submit" class="btn">Send</button>
-      </form>
-    </div>
+      <label for="msg"><b>Needing help?</b></label>
+      <textarea placeholder="Type your message here..." name="msg" required></textarea>
+      <button type="submit" class="buttons sendBtn">Send</button>
+    </form>
+  </div>
 
-    <!-- Footer with contact us, about us page etc -->
-    <div class="footer">
-      <p>Footer</p>
-    </div>
-  </body>
+  <!-- Footer with contact us, about us page etc -->
+  <div class="footer">
+    <p>Footer</p>
+  </div>
+</body>
+
 </html>

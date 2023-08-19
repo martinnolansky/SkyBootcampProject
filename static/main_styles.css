@@ -54,14 +54,17 @@ img {
   text-decoration: none;
 }
 
+.chatBtn {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+}
+
 .openButton {
-  background-color: #555;
+  bottom: 110px;
   cursor: pointer;
   position: fixed;
-  display: flex;
-  justify-content: flex-end;
-  max-width: 700px;
-  margin: 20px auto;
+  margin-top: auto;
   background: #ffc008;
   border-radius: 20px;
   color: white;
@@ -113,7 +116,11 @@ img {
   background-color: red;
 }
 
-.formContainer .btn:hover,
+.formContainer .sendBtn {
+  background-color: green;
+}
+
+.formContainer .buttons:hover,
 .openButton:hover {
   opacity: 1;
 }
