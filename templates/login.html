@@ -2,18 +2,26 @@
 
 {% block content %}
 
-<h1>Login</h1>
-<form method="POST" action="">
-  {{ form.hidden_tag() }}
-  {{ form.username }}
-  {{ form.password }}
-  {{ form.submit }}
+<div class="parent">
+  <div class="login">
+    <h1>Login</h1>
+      <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        {{ form.username }}
+      </br>
+        {{ form.password }}
+      </br>
+        {{ form.submit }}
+      </br>
 </form>
 
 <a href="{{ url_for('register') }}">Don't have an account? Sign Up</a>
 
+</div>
+</div>
+
 {% if current_user.is_authenticated %}
-Hi authenticated {{ current_user.name }}!
+Hi authenticated {{ current_user.name }}!ç
 {% endif %}
 
 {% endblock %}

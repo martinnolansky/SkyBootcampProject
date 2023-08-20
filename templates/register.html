@@ -2,14 +2,22 @@
 
 {% block content %}
 
-<h1>Register</h1>
-<form method="POST" action="">
-  {{ form.hidden_tag() }}
-  {{ form.username }}
-  {{ form.password }}
-  {{ form.submit}}
-</form>
+<div class="parent">
+  <div class="register">
+    <h1>Register</h1>
+    <form method="POST" action="">
+      {{ form.hidden_tag() }}
+      {{ form.username }}
+    </br>
+      {{ form.password }}
+    </br>
+      {{ form.submit}}
+    </br>
+    </form>
 
 <a href="{{ url_for('login') }}">Already have an account? Log In</a>
+
+</div>
+</div>
 
 {% endblock %}

@@ -4,7 +4,11 @@
 {% block content %}
 
 <h1>Page not found</h1>
-<p>please return <a href="/">home</a></p>
+{% if current_user.is_authenticated %}
+<a href="{{ url_for('dashboard') }}"><button type="button" class="buttons" id="dashBtn">Dashboard</button></a>
+{% endif %}
 
-<p>THIS SHOULD BE A BUTTON</p>
+{% if not current_user.is_authenticated %}
+<a href="{{ url_for('home') }}"><button type="button" class="buttons" id="dashBtn">Home</button></a>
+{% endif %}
 {% endblock %}

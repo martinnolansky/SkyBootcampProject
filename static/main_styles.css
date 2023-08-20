@@ -3,7 +3,7 @@
   src: url("SKYTEXT.TTF");
 }
 
-p {
+h1, h2, h3, p, button {
   font-family: skyText;
 }
 
@@ -29,12 +29,22 @@ img {
 
 * {
   box-sizing: border-box;
+  margin: initial;
 }
 
 .buttonContainer {
   display: flex;
   align-content: center;
   justify-content: center;
+}
+
+#loginBtn, #registerBtn{
+  display: inline;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .buttons {
@@ -131,4 +141,18 @@ img {
 
 .flexChild {
   flex: 1;
+}
+
+.parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login, .register{
+  height: 100dvh;
+}
+
+#dashBtn{
+  display: inline;
 }
