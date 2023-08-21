@@ -18,7 +18,7 @@
     <a href="/" class="header_logo"><img src="/static/sky_logo.png" alt="Sky UK Logo" /></a>
 
     <!-- Nav bar for log in functionality -->
-    <nav class="nav">
+    <nav class="nav" id="logInNav">
       {% if  not current_user.is_authenticated %}
         <a href="{{ url_for('login') }}"><button type="button" class="buttons" id="loginBtn">Login</button></a>
         <a href="{{ url_for('register') }}"><button type="button" class="buttons" id="registerBtn">Register</button></a>
@@ -60,6 +60,8 @@
   <!-- Footer with contact us, about us page etc -->
   <div class="footer">
     <p>Footer</p>
+    <a href="{{ url_for('about') }}"><button type="button" class="buttons" id="aboutBtn">About Us</button></a>
+    <a href="{{ url_for('contact') }}"><button type="button" class="buttons" id="contactBtn">Contact Us</button></a>
   </div>
 </body>
 
