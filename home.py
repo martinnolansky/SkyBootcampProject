@@ -78,6 +78,16 @@ def contact():
 def dashboard():
     return render_template('dashboard.html')
 
+@app.route('/agile')
+@login_required
+def agile():
+    return render_template('agile.html')
+
+@app.route('/business-analysis')
+@login_required
+def business_analysis():
+    return render_template('business_analysis.html')
+
 @app.route('/logout', methods=['GET', 'POST'])
 @login_required
 def logout():
