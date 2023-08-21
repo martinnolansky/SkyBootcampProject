@@ -83,6 +83,11 @@ def dashboard():
 def agile():
     return render_template('agile.html')
 
+@app.route('/profile')
+@login_required
+def profile():
+    return render_template('profile.html')
+
 @app.route('/business-analysis')
 @login_required
 def business_analysis():
