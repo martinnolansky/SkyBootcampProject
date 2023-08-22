@@ -2,22 +2,30 @@
 
 {% block content %}
 
-<div class="parent">
-  <div class="login">
-    <h1>Login</h1>
-      <form method="POST" action="">
-        {{ form.hidden_tag() }}
-        {{ form.username }}
-      </br>
-        {{ form.password }}
-      </br>
-        {{ form.submit }}
-      </br>
-</form>
 
+
+<div class="parentFlex">
+  
+  <div class="item" style="background: url(/static/user.png) center center no-repeat;"></div>
+  
+  <div class="item last">
+    <div class="login">
+      <h1>Login</h1>
+        <form method="POST" action="">
+          {{ form.hidden_tag() }}
+          {{ form.username }}
+        </br>
+          {{ form.password }}
+        </br>
+          {{ form.submit }}
+        </br>
+  </form>
+  
 <a href="{{ url_for('register') }}">Don't have an account? Sign Up</a>
-
+  </div>
+  
 </div>
+
 </div>
 
 {% if current_user.is_authenticated %}

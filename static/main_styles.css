@@ -358,3 +358,37 @@ a {
   font-size: 1em;
   font-family: skyText;
 }
+
+.parentFlex {
+  display: flex;
+  font-family: arial, sans-serif;
+}
+
+.item {
+  width: 50%;
+  padding: 2em;
+  color: #ffffff;
+  background: #eeeeee;
+  min-height: 500px;
+}
+
+.last {
+  color: #222;
+  background: #ccc;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .parentFlex {
+    flex-direction: column-reverse;
+  }
+
+  .item {
+    width: auto;
+    min-height: 200px;
+  }
+
+  .last {
+    background: #aa0000;
+  }
+}

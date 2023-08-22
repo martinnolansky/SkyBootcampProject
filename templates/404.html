@@ -1,14 +1,113 @@
-{% extends "base.html"%}
-{%block title%} page not found {% endblock %}
-
-{% block content %}
+{% extends "base.html"%} {%block title%} page not found {% endblock %} {% block
+content %}
 
 <h1>Page not found</h1>
 {% if current_user.is_authenticated %}
-<a href="{{ url_for('dashboard') }}"><button type="button" class="buttons" id="dashBtn">Dashboard</button></a>
-{% endif %}
+<a href="{{ url_for('dashboard') }}"
+  ><button type="button" class="buttons" id="dashBtn">Dashboard</button></a
+>
+<section class="containerTop">
+  <div class="one">
+    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
+    <h3>
+      Shop with peace of mind that your goods and transactions will always be
+      protected.
+    </h3>
+  </div>
+  <div class="two">
+    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
+    <h3>
+      Shop with peace of mind that your goods and transactions will always be
+      protected.
+    </h3>
+  </div>
+</section>
 
-{% if not current_user.is_authenticated %}
-<a href="{{ url_for('home') }}"><button type="button" class="buttons" id="dashBtn">Home</button></a>
-{% endif %}
-{% endblock %}
+<section class="containerTop">
+  <div class="one">
+    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
+    <h3>
+      Shop with peace of mind that your goods and transactions will always be
+      protected.
+    </h3>
+  </div>
+  <div class="two">
+    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
+    <h3>
+      Shop with peace of mind that your goods and transactions will always be
+      protected.
+    </h3>
+  </div>
+</section>
+
+<section class="containerTop">
+  <div class="one">
+    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
+    <h3>
+      Shop with peace of mind that your goods and transactions will always be
+      protected.
+    </h3>
+  </div>
+  <div class="two">
+    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
+    <h3>
+      Shop with peace of mind that your goods and transactions will always be
+      protected.
+    </h3>
+  </div>
+</section>
+{% endif %} {% if not current_user.is_authenticated %}
+<a href="{{ url_for('home') }}"
+  ><button type="button" class="buttons" id="dashBtn">Home</button></a
+>
+<section class="containerTop">
+  <div class="one">
+    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
+    <h3>
+      Shop with peace of mind that your goods and transactions will always be
+      protected.
+    </h3>
+  </div>
+  <div class="two">
+    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
+    <h3>
+      Shop with peace of mind that your goods and transactions will always be
+      protected.
+    </h3>
+  </div>
+</section>
+
+<section class="containerTop">
+  <div class="one">
+    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
+    <h3>
+      Shop with peace of mind that your goods and transactions will always be
+      protected.
+    </h3>
+  </div>
+  <div class="two">
+    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
+    <h3>
+      Shop with peace of mind that your goods and transactions will always be
+      protected.
+    </h3>
+  </div>
+</section>
+
+<section class="containerTop">
+  <div class="one">
+    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
+    <h3>
+      Shop with peace of mind that your goods and transactions will always be
+      protected.
+    </h3>
+  </div>
+  <div class="two">
+    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
+    <h3>
+      Shop with peace of mind that your goods and transactions will always be
+      protected.
+    </h3>
+  </div>
+</section>
+{% endif %} {% endblock %}

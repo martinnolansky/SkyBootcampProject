@@ -2,22 +2,28 @@
 
 {% block content %}
 
-<div class="parent">
-  <div class="register">
-    <h1>Register</h1>
-    <form method="POST" action="">
-      {{ form.hidden_tag() }}
-      {{ form.username }}
-    </br>
-      {{ form.password }}
-    </br>
-      {{ form.submit}}
-    </br>
-    </form>
-
-<a href="{{ url_for('login') }}">Already have an account? Log In</a>
-
+<div class="parentFlex">
+  
+  <div class="item" style="background: url(/static/register.svg)center center no-repeat"></div>
+  
+  <div class="item last">
+    <div class="register">
+      <h1>Register</h1>
+      <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        {{ form.username }}
+      </br>
+        {{ form.password }}
+      </br>
+        {{ form.submit}}
+      </br>
+      </form>
+  
+<a href="{{ url_for('register') }}">Don't have an account? Sign Up</a>
+  </div>
+  
 </div>
+
 </div>
 
 {% endblock %}
