@@ -1,12 +1,87 @@
-{% extends "base.html"%}
+{% extends "base.html"%} {% block content %}
+<div class="topnav">
+  <span><b>30 days free when you sign up for a yearly membership.</b></span>
+</div>
+<section class="containerTop" style="border-bottom: 5px solid black">
+  <div class="containerImg">
+    <img src="/static/headImg.png" alt="Header Image" class="landingImg" />
+    <div class="centered">
+      <h1 class="landingText">Sky Bootcamp Project Team 1</h1>
+    </div>
+  </div>
+</section>
 
-{% block content %}
+<section class="containerTop">
+  <div class="one">
+    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
+    <h3>
+      Shop with peace of mind that your goods and transactions will always be
+      protected.
+    </h3>
+  </div>
+  <div class="two">
+    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
+    <h3>
+      Shop with peace of mind that your goods and transactions will always be
+      protected.
+    </h3>
+  </div>
+</section>
 
-<h2>Welcome to the landing page</h2>
+<section class="containerTop">
+  <div class="one">
+    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
+    <h3>
+      Shop with peace of mind that your goods and transactions will always be
+      protected.
+    </h3>
+  </div>
+  <div class="two">
+    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
+    <h3>
+      Shop with peace of mind that your goods and transactions will always be
+      protected.
+    </h3>
+  </div>
+</section>
+
+<section class="containerTop">
+  <div class="one">
+    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
+    <h3>
+      Shop with peace of mind that your goods and transactions will always be
+      protected.
+    </h3>
+  </div>
+  <div class="two">
+    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
+    <h3>
+      Shop with peace of mind that your goods and transactions will always be
+      protected.
+    </h3>
+  </div>
+</section>
+
+<section class="containerTop">
+  <div class="one">
+    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
+    <h3>
+      Shop with peace of mind that your goods and transactions will always be
+      protected.
+    </h3>
+  </div>
+  <div class="two">
+    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
+    <h3>
+      Shop with peace of mind that your goods and transactions will always be
+      protected.
+    </h3>
+  </div>
+</section>
 
 {% if current_user.is_authenticated %}
-<a href="{{ url_for('dashboard') }}"><button type="button" class="buttons" id="dashBtn">Dashboard</button></a>
+<a href="{{ url_for('dashboard') }}"
+  ><button type="button" class="buttons" id="dashBtn">Dashboard</button></a
+>
 <p>This is written using SkyText - Hi, you are authenticated</p>
-{% endif %}
-
-{% endblock %}
+{% endif %} {% endblock %}

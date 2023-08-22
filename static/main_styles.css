@@ -3,7 +3,140 @@
   src: url("SKYTEXT.TTF");
 }
 
-h1, h2, h3, p, button {
+.navRegLog {
+  color: white;
+  font-size: 1.25em;
+  font-family: skyText;
+}
+.navRegLog:hover {
+  text-decoration: underline;
+}
+
+.landingText {
+  font-size: 5em;
+}
+
+.containerImg {
+  border-top: 2px solid black;
+}
+a + a {
+  margin-left: 15px;
+}
+
+html {
+  height: 100%;
+}
+
+header,
+footer {
+  flex: none;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+footer {
+  color: #bbb;
+  line-height: 1.5;
+  border-top: 2px solid black;
+  background-image: linear-gradient(
+    to right,
+    #ff9e00 0%,
+    #f00 25%,
+    #b5007d 50%,
+    #21429c 75%,
+    #0071ff 100%
+  );
+  border-top: solid rgba(0, 0, 0, 0.1);
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: #eee;
+}
+a:hover {
+  text-decoration: underline;
+}
+.ft-title {
+  color: #fff;
+  font-family: skyText;
+  font-size: 1.375rem;
+  padding-bottom: 0.625rem;
+}
+/* Sticks footer to bottom */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: white;
+  flex-direction: column;
+  height: 100%;
+}
+
+.container {
+  flex: 1;
+}
+/* Footer main */
+.ft-main {
+  padding: 1.25rem 1.875rem;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 0.5px solid black;
+}
+@media only screen and (min-width: 29.8125rem /* 477px */) {
+  .ft-main {
+    justify-content: space-evenly;
+  }
+}
+@media only screen and (min-width: 77.5rem /* 1240px */) {
+  .ft-main {
+    justify-content: space-evenly;
+  }
+}
+.ft-main-item {
+  padding: 1.25rem;
+  min-width: 12.5rem;
+}
+ß
+
+/* Footer legal */
+.ft-legal {
+  border-top: 0.25px solid black;
+  padding: 0.9375rem 1.875rem;
+  margin: 5px;
+  background-image: linear-gradient(
+    to right,
+    #ff9e00 0%,
+    #f00 25%,
+    #b5007d 50%,
+    #21429c 75%,
+    #0071ff 100%
+  );
+}
+.ft-legal-list {
+  font-family: skyText;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.ft-legal-list li {
+  margin: 0.125rem 0.625rem;
+  white-space: nowrap;
+}
+/* one before the last child */
+.ft-legal-list li:nth-last-child(2) {
+  flex: 1;
+}
+
+h1,
+h2,
+h3,
+p,
+button {
   font-family: skyText;
 }
 
@@ -11,28 +144,27 @@ h1, h2, h3, p, button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 10px solid black;
+  border-bottom: 2px solid black;
+  background-image: linear-gradient(
+    to right,
+    #ff9e00 0%,
+    #f00 25%,
+    #b5007d 50%,
+    #21429c 75%,
+    #0071ff 100%
+  );
 }
 
-img{
+.header_logo {
   width: 60px;
-  margin: 20px;
+  margin: 10px;
 }
 
-.logInNav{
+.logInNav {
   margin-right: 10px;
 }
 
-.footer {
-  border-top: 10px solid black;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-}
-
 * {
-  box-sizing: border-box;
   margin: initial;
 }
 
@@ -42,7 +174,10 @@ img{
   justify-content: center;
 }
 
-#loginBtn, #registerBtn, #contactBtn, #aboutBtn{
+#loginBtn,
+#registerBtn,
+#contactBtn,
+#aboutBtn {
   display: inline;
   text-decoration: none;
 }
@@ -74,18 +209,21 @@ a {
   align-items: flex-end;
 }
 
-.openButton {
-  bottom: 110px;
+.chatButton {
+  bottom: 25%;
   cursor: pointer;
-  position: fixed;
   margin-top: auto;
   margin: 20px;
-  background: #ffc008;
+  background-color: rgb(0, 15, 245);
   border-radius: 20px;
   color: white;
-  font-size: 20px;
+  font-size: 1.25em;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
+}
+
+.chatButton:hover {
+  background-color: rgb(0, 12, 196);
 }
 
 .chatPopup {
@@ -105,7 +243,6 @@ a {
 
 .formContainer textarea {
   width: 100%;
-  padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
   background: #f1f1f1;
@@ -154,10 +291,70 @@ a {
   justify-content: center;
 }
 
-.login, .register{
+.login,
+.register {
   height: 100dvh;
 }
 
-#dashBtn{
+#dashBtn {
   display: inline;
+}
+
+.containerTop,
+.landingImg {
+  image-rendering: pixelated;
+  width: 100%;
+  height: 500px;
+  margin: auto;
+}
+
+.containerImg {
+  width: 100%;
+  height: 500px;
+  margin: auto;
+  margin-top: 15px;
+  width: 100%;
+  margin: 0;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.one {
+  width: 40%;
+  height: 150px;
+  float: left;
+  padding-left: 50px;
+}
+
+.two {
+  margin-left: 15%;
+  height: 235px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.topnav {
+  background-color: white;
+  margin: 5px;
+  text-align: center;
+  font-size: 1em;
+  font-family: skyText;
 }
