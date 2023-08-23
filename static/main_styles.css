@@ -3,6 +3,10 @@
   src: url("SKYTEXT.TTF");
 }
 
+.courses {
+  color: black !important;
+}
+
 .navRegLog {
   color: white;
   font-size: 1.25em;
@@ -299,8 +303,6 @@ a {
 #dashBtn {
   display: inline;
 }
-
-.containerTop,
 .landingImg {
   image-rendering: pixelated;
   width: 100%;
@@ -322,14 +324,14 @@ a {
 
 .one {
   width: 40%;
-  height: 150px;
+  height: 600px;
   float: left;
   padding-left: 50px;
 }
 
 .two {
   margin-left: 15%;
-  height: 235px;
+  height: 600px;
 }
 
 /* Centered text */
@@ -391,4 +393,75 @@ a {
   .last {
     background: #aa0000;
   }
+}
+
+.learningHomeImg {
+  width: 600px;
+}
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  margin-bottom: 50px;
+  padding: 10px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-items: center;
+}
+.cards-container-about {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  margin-bottom: 50px;
+  padding: 10px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-items: center;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card:nth-child(7) {
+  grid-column: 2;
+}
+
+.card_img {
+  width: 200px;
+  margin: 10px;
+}
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  margin: 10px 0;
+}
+
+.coursesMainHead {
+  text-align: center;
+  font-family: skyText;
+  font-size: 3em;
+  padding: 20px;
+}
+
+.HomeIntro {
+  text-align: center;
+  font-family: skyText;
 }

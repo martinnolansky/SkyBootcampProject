@@ -25,6 +25,7 @@
       {% endif %}
       {% if current_user.is_authenticated %}
       <div class="flexContainer logInNav">
+        <a href="{{ url_for('dashboard') }}" class="navRegLog">Dashboard</a>
         <a href="{{ url_for('profile') }}" class="navRegLog">Profile</a>
         <a href="{{ url_for('logout') }}"class="navRegLog">Logout</a>
       </div>
