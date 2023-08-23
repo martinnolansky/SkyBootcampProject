@@ -25,6 +25,7 @@
       {% endif %}
       {% if current_user.is_authenticated %}
       <div class="flexContainer logInNav">
+        <a href="{{ url_for('dashboard') }}" class="navRegLog">Dashboard</a>
         <a href="{{ url_for('profile') }}" class="navRegLog">Profile</a>
         <a href="{{ url_for('logout') }}"class="navRegLog">Logout</a>
       </div>
@@ -34,32 +35,6 @@
   
   <!-- Content from other templates added here -->
   {% block content %} {% endblock %}
-
-  <!-- Chat button that opens pop up below -->
-  <div class="chatBtn">
-    <button class="chatButton" onclick="openForm()">Chat</button>
-  </div>
-
-  <!-- Chat popup with message box, submit and close button -->
-  <div class="chatPopup" id="chatForm">
-    <form action="/" class="formContainer">
-      <div class="flexContainer">
-        <div class="flexChild">
-          <h2>Sky Assist</h2>
-        </div>
-        <div class="flexChild">
-          <button type="button" class="buttons cancel" onclick="closeForm()">
-            Close
-          </button>
-        </div>
-      </div>
-    </br>
-
-      <label for="msg"><b>Needing help?</b></label>
-      <textarea placeholder="Type your message here..." name="msg" required></textarea>
-      <button type="submit" class="buttons sendBtn">Send</button>
-    </form>
-  </div>
 
 <!-- Footer with contact us, about us page etc -->
 <div class="footer">
