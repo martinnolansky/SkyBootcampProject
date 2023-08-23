@@ -10,10 +10,10 @@ from flask_bcrypt import Bcrypt
 
 # Instantiate and connect to local database
 app = Flask(__name__)
-db = SQLAlchemy(app)
-bcrypt = Bcrypt(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['SECRET_KEY'] = 'thisisasecretkey' # Should be in an env file
+db = SQLAlchemy(app)
+bcrypt = Bcrypt(app)
 
 
 # Flask-Login package for handling user session management
