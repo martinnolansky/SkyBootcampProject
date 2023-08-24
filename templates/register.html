@@ -2,28 +2,27 @@
 
 {% block content %}
 
-<div class="parentFlex">
-  
-  <div class="item" style="background: url(/static/register.svg)center center no-repeat"></div>
-  
-  <div class="item last">
-    <div class="register">
+<section class="containerTop">
+  <div class="cards-container">
+    <img src="/static/register.png" alt="Login Image" class="HomeIntro" style="width: 500px;">
+    <div class="login">
       <h1>Register</h1>
       <form method="POST" action="">
         {{ form.hidden_tag() }}
         {{ form.username }}
-      </br>
+        </br>
         {{ form.password }}
-      </br>
+        </br>
         {{ form.submit}}
-      </br>
+        </br>
       </form>
-  
-<a href="{{ url_for('register') }}">Already got an account? Log In</a>
-  </div>
-  
-</div>
 
-</div>
+      <a href="{{ url_for('register') }}">Already got an account? Log In</a>
+    </div>
+
+  </div>
+
+  </div>
+</section>
 
 {% endblock %}

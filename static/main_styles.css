@@ -77,7 +77,6 @@ body {
   min-height: 100vh;
   flex-direction: column;
   background-color: white;
-  flex-direction: column;
   height: 100%;
 }
 
@@ -295,11 +294,6 @@ a {
   justify-content: center;
 }
 
-.login,
-.register {
-  height: 100dvh;
-}
-
 #dashBtn {
   display: inline;
 }
@@ -315,7 +309,6 @@ a {
   height: 500px;
   margin: auto;
   margin-top: 15px;
-  width: 100%;
   margin: 0;
   position: relative;
   text-align: center;
@@ -524,4 +517,52 @@ a {
 
 .fofbtn {
   color: white;
+}
+
+.login {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.login h1 {
+  margin-bottom: 20px;
+}
+
+.login form {
+  margin-bottom: 20px;
+}
+
+.login form input[type="text"],
+.login form input[type="password"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login form input[type="submit"] {
+  background-color: rgb(0, 15, 245);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.login form input[type="submit"]:hover {
+  background-color: rgb(0, 12, 196);
+}
+
+.login a {
+  color: rgb(0, 15, 245);
+  text-decoration: none;
+}
+
+.login a:hover {
+  text-decoration: underline;
 }
