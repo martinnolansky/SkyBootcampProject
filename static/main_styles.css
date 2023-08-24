@@ -465,3 +465,34 @@ a {
   text-align: center;
   font-family: skyText;
 }
+
+
+
+/* css code for about us page */
+
+.team-member {
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 300px;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.team-member h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+
