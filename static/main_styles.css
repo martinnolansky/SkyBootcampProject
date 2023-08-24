@@ -466,8 +466,6 @@ a {
   font-family: skyText;
 }
 
-
-
 /* css code for about us page */
 
 .team-member {
@@ -495,7 +493,38 @@ a {
   margin-bottom: 1rem;
 }
 
+#main {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
 
+.fof {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.fof h1 {
+  font-size: 50px;
+  display: block;
+  margin-bottom: 10px;
+  padding-right: 12px;
+  animation: moveUpDown 1s alternate infinite;
+}
+
+@keyframes moveUpDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+.fofbtn {
+  color: white;
+}
 
 main {
   width: 100%;
