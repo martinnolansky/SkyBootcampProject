@@ -16,7 +16,6 @@ db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 
 
-
 # Flask-Login package for handling user session management
 login_manager = LoginManager()
 login_manager.init_app(app)
