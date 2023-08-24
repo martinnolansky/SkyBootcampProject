@@ -14,7 +14,10 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['SECRET_KEY'] = 'thisisasecretkey' # Should be in an env file
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
+<<<<<<< HEAD
 
+=======
+>>>>>>> ccdad4add71b4c401af80d9958d5f8a7ae927a4a
 
 # Flask-Login package for handling user session management
 login_manager = LoginManager()

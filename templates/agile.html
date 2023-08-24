@@ -1,54 +1,31 @@
 {% extends "base.html"%} {% block content %} {% if current_user.is_authenticated
 %}
 <h2>Welcome to the Agile page</h2>
-<section class="containerTop">
-  <div class="one">
-    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
-    <h3>
-      Shop with peace of mind that your goods and transactions will always be
-      protected.
-    </h3>
+<br>
+<br>
+
+<section class="module-content">
+  <h2>Key Concepts</h2>
+  <p>In this section, we'll cover the following key concepts:</p>
+  
+  <li>Concept 1: What is it?</li>
+  <li>Concept 2: Why is it important?</li>
+  <li>Concept 3: How does it work?</li>
+
+</section>
+<section class="module-content">
+  <h2>Video: Understanding the Basics</h2>
+  <div class="video-container">
+    <iframe width="500" height="500" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0"></iframe>
   </div>
-  <div class="two">
-    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
-    <h3>
-      Shop with peace of mind that your goods and transactions will always be
-      protected.
-    </h3>
+</section>
+<section class="module-content">
+  <h2>Image Gallery</h2>
+  <div class="image-gallery">
+    <img src="image1.jpg" alt="Image 1">
+    <img src="image2.jpg" alt="Image 2">
+    <!-- Add more images as needed -->
   </div>
 </section>
 
-<section class="containerTop">
-  <div class="one">
-    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
-    <h3>
-      Shop with peace of mind that your goods and transactions will always be
-      protected.
-    </h3>
-  </div>
-  <div class="two">
-    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
-    <h3>
-      Shop with peace of mind that your goods and transactions will always be
-      protected.
-    </h3>
-  </div>
-</section>
-
-<section class="containerTop">
-  <div class="one">
-    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
-    <h3>
-      Shop with peace of mind that your goods and transactions will always be
-      protected.
-    </h3>
-  </div>
-  <div class="two">
-    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
-    <h3>
-      Shop with peace of mind that your goods and transactions will always be
-      protected.
-    </h3>
-  </div>
-</section>
 {% endif %} {% endblock %}
