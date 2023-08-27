@@ -5,10 +5,45 @@
 <h1>Meet the Team</h1>
 
 <section class="team-member">
-  <img src="martin.jpg" alt="martin">
+  <div class="container">
+    <div class="box">
+  <img src="/static/777.jpg" alt="martin">
   <h2>Martin Nolan</h2>
   <p>Team Member</p>
   <p>We are team sprints and giggles.</p>
+</div>
+
+<style>
+  .container {
+      width: 100%;
+      padding: 50px;
+      margin: 100px auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center
+  }
+
+  .box {
+      width: 220px;
+      margin: 0 11px;
+      box-shadow:rgba(21, 21, 21, 0.793);
+      transition: 0.9s;
+  }
+
+  .box img {
+      display: block;
+      width: 110%;
+      border-radius: 1px;
+  }
+
+  .box:hover {
+      transform: scale(1.4);
+      z-index:0.5;
+  }
+
+</style>
+
+
 </section>
 <section class="team-member">
   <img src="jemima.jpg" alt="jemima">
