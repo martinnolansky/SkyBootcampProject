@@ -130,20 +130,15 @@
 </div>
 
 <!-- Chat popup with message box, submit and close button -->
+
 <div class="chatPopup" id="chatForm">
   <form action="/" class="formContainer">
     <div class="flexContainer">
-      <div class="flexChild">
-        <h2>Sky Assist</h2>
-      </div>
-      <div class="flexChild">
-        <button type="button" class="buttons cancel" onclick="closeForm()">
-          Close
-        </button>
-      </div>
+      <h2 class="flexChild">Sky Assist</h2>
+      <button type="button" class="buttons cancel" onclick="closeForm()">
+        Close
+      </button>
     </div>
-    </br>
-
     <label for="msg"><b>Needing help?</b></label>
     <textarea placeholder="Type your message here..." name="msg" required></textarea>
     <button type="submit" class="buttons sendBtn">Send</button>

@@ -15,66 +15,66 @@
 <body>
   <!-- Clickable logo that redirects to home page-->
   <header class="site_header">
-    <a href="/" class="header_logo"><img src="/static/whiteLogo.png" alt="Sky UK Logo" class="header_logo"/></a>
+    <a href="/" class="header_logo"><img src="/static/whiteLogo.png" alt="Sky UK Logo" class="header_logo" /></a>
 
     <!-- Nav bar for log in functionality -->
     <nav class="nav logInNav">
       {% if  not current_user.is_authenticated %}
       <a href="{{ url_for('login') }}" class="navRegLog">Login</a>
-        <a href="{{ url_for('register') }}" class="navRegLog">Register</a>
+      <a href="{{ url_for('register') }}" class="navRegLog">Register</a>
       {% endif %}
       {% if current_user.is_authenticated %}
       <div class="flexContainer logInNav">
         <a href="{{ url_for('dashboard') }}" class="navRegLog">Dashboard</a>
-        <a href="{{ url_for('profile') }}" class="navRegLog">Profile</a>
-        <a href="{{ url_for('logout') }}"class="navRegLog">Logout</a>
+        <a href="404.html" class="navRegLog">Profile</a>
+        <a href="{{ url_for('logout') }}" class="navRegLog">Logout</a>
       </div>
       {% endif %}
     </nav>
   </header>
-  
+
   <!-- Content from other templates added here -->
   {% block content %} {% endblock %}
 
-<!-- Footer with contact us, about us page etc -->
-<div class="footer">
-  <footer>
-    <!-- Footer main -->
-    <section class="ft-main">
-      <div class="ft-main-item">
-        <h2 class="ft-title">About</h2>
-        <ul>
-          <li><a href="{{ url_for('about') }}">About Us</a></li>
-          <li><a href="404.html">Reviews</a></li>
+  <!-- Footer with contact us, about us page etc -->
+  <div class="footer">
+    <footer>
+      <!-- Footer main -->
+      <section class="ft-main">
+        <div class="ft-main-item">
+          <h2 class="ft-title">About</h2>
+          <ul>
+            <li><a href="{{ url_for('about') }}">About Us</a></li>
+            <li><a href="404.html">Reviews</a></li>
+          </ul>
+        </div>
+        <div class="ft-main-item">
+          <h2 class="ft-title">Resources</h2>
+          <ul>
+            <li><a href="404.html">Site Map</a></li>
+            <li><a href="404.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="ft-main-item">
+          <h2 class="ft-title">Help & Contact</h2>
+          <ul>
+            <li><a href="404.html">FAQs</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact Us</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Footer legal -->
+      <section class="ft-legal">
+        <ul class="ft-legal-list">
+          <li><a href="404.html">Terms &amp; Conditions</a></li>
+          <li><a href="404.html">Privacy Policy</a></li>
+          <li>&copy; 2023 Copyright Sky Tech Bootcamp Group 1</li>
         </ul>
-      </div>
-      <div class="ft-main-item">
-        <h2 class="ft-title">Resources</h2>
-        <ul>
-          <li><a href="404.html">Site Map</a></li>
-          <li><a href="404.html">Blog</a></li>
-        </ul>
-      </div>
-      <div class="ft-main-item">
-        <h2 class="ft-title">Help & Contact</h2>
-        <ul>
-          <li><a href="404.html">FAQs</a></li>
-          <li><a href="{{ url_for('contact') }}">Contact Us</li>
-        </ul>
-      </div>
-    </section>
-  
-    <!-- Footer legal -->
-    <section class="ft-legal">
-      <ul class="ft-legal-list">
-        <li><a href="404.html">Terms &amp; Conditions</a></li>
-        <li><a href="404.html">Privacy Policy</a></li>
-        <li>&copy; 2023 Copyright Sky Tech Bootcamp Group 1</li>
-      </ul>
-    </section>
-  </footer>
-</div>
-  
+      </section>
+    </footer>
+  </div>
+
 </body>
 
 </html>

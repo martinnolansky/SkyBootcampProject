@@ -1,57 +1,30 @@
 {% extends "base.html"%} {% block content %}
 
-<h2>Welcome to the Contact Us page</h2>
+<h2 class="coursesMainHead">Contact Us</h2>
 
-<p>This is written using SkyText</p>
-<section class="containerTop">
-  <div class="one">
-    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
-    <h3>
-      Shop with peace of mind that your goods and transactions will always be
-      protected.
-    </h3>
-  </div>
-  <div class="two">
-    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
-    <h3>
-      Shop with peace of mind that your goods and transactions will always be
-      protected.
-    </h3>
-  </div>
-</section>
+<div class="containers">
+  <form action="/">
+    <label for="fname">First Name</label>
+    <input class="inputs" type="text" id="fname" name="firstname" placeholder="Your name">
 
-<section class="containerTop">
-  <div class="one">
-    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
-    <h3>
-      Shop with peace of mind that your goods and transactions will always be
-      protected.
-    </h3>
-  </div>
-  <div class="two">
-    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
-    <h3>
-      Shop with peace of mind that your goods and transactions will always be
-      protected.
-    </h3>
-  </div>
-</section>
+    <label for="lname">Last Name</label>
+    <input class="inputs" type="text" id="lname" name="lastname" placeholder="Your surname">
 
-<section class="containerTop">
-  <div class="one">
-    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
-    <h3>
-      Shop with peace of mind that your goods and transactions will always be
-      protected.
-    </h3>
-  </div>
-  <div class="two">
-    <h1>A Decentralised Marketplace For All Your Shopping Needs</h1>
-    <h3>
-      Shop with peace of mind that your goods and transactions will always be
-      protected.
-    </h3>
-  </div>
-</section>
+    <label for="topics">Topic</label>
+    <select class="inputs" id="topics" name="topic">
+      <option value="select">Choose a topic</option>
+      <option value="course">Course Content</option>
+      <option value="account">Account Queries</option>
+      <option value="subscription">Subscription</option>
+      <option value="other">Other</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea class="inputs" id="subject" name="subject" placeholder="How can we help?" style="height:200px"></textarea>
+
+    <input class="inputs" type="submit" value="Submit">
+  </form>
+</div>
+
 
 {% endblock %}

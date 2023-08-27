@@ -4,23 +4,27 @@
 
 <section class="containerTop">
   <div style="height: 75dvh;">
-  <div class="cards-container">
-    <img src="/static/register.png" alt="Login Image" class="HomeIntro" style="width: 500px;">
-    <div class="login">
-      <h1>Register</h1>
-      <form method="POST" action="">
-        {{ form.hidden_tag() }}
-        {{ form.username }}
-        </br>
-        {{ form.password }}
-        </br>
-        {{ form.submit}}
-        </br>
-      </form>
+    <div class="cards-container">
+      <img src="/static/register.png" alt="Login Image" class="HomeIntro" style="width: 500px;">
+      <div class="login">
+        <h1>Register</h1>
+        <form method="POST" action="">
+          {{ form.hidden_tag() }}
+          {{ form.firstname }}
+          </br>
+          {{ form.lastname }}
+          </br>
+          {{ form.username }}
+          </br>
+          {{ form.password }}
+          </br>
+          {{ form.submit}}
+          </br>
+        </form>
 
-      <a href="{{ url_for('register') }}">Already got an account? Log In</a>
+        <a href="{{ url_for('login') }}">Already got an account? Log In</a>
+      </div>
     </div>
-</div>
   </div>
 
   </div>
