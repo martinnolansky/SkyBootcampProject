@@ -27,27 +27,30 @@ def load_user(user_id):
 # Create table and columns in local database
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
+    firstname = db.Column(db.String(20), nullable=False)
+    lastname = db.Column(db.String(20), nullable=False)
     username = db.Column(db.String(20), nullable=False, unique=True)
     password = db.Column(db.String(80), nullable=False)
 
-
 # Flask form to allow user to register
 class RegisterForm(FlaskForm):
+    firstname = StringField(validators=[
+                           InputRequired(), Length(min=2, max=20)], render_kw={"placeholder": "Firstname"})
+    lastname = StringField(validators=[
+                           InputRequired(), Length(min=2, max=20)], render_kw={"placeholder": "Surname"})
     username = StringField(validators=[
                            InputRequired(), Length(min=4, max=20)], render_kw={"placeholder": "Username"})
     password = PasswordField(validators=[
                              InputRequired(), Length(min=8, max=20)], render_kw={"placeholder": "Password"})
     submit = SubmitField('Register')
 
-
-# Check to see if the username entered in register form already exists in database
+    # Check to see if the username entered in register form already exists in database
     def validate_username(self, username):
         existing_user_username = User.query.filter_by(
             username=username.data).first()
         if existing_user_username:
             raise ValidationError(
                 'That username already exists. Please choose a different one.')
-
 
 # Flask form to allow user to login
 class LoginForm(FlaskForm):
@@ -118,11 +121,12 @@ def register():
     form = RegisterForm()
     if form.validate_on_submit():
         hashed_password = bcrypt.generate_password_hash(form.password.data)
-        new_user = User(username=form.username.data, password=hashed_password)
+        new_user = User(firstname=form.firstname.data, lastname=form.lastname.data, username=form.username.data, password=hashed_password)
         db.session.add(new_user)
         db.session.commit()
         return redirect(url_for('login'))
     return render_template('register.html', form=form)
 
 if __name__ == '__main__':
+    db.create_all()
     app.run()
