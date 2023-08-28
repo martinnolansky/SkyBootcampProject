@@ -29,6 +29,7 @@ a + a {
 
 html {
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 header,
@@ -77,7 +78,6 @@ body {
   min-height: 100vh;
   flex-direction: column;
   background-color: white;
-  flex-direction: column;
   height: 100%;
 }
 
@@ -295,11 +295,6 @@ a {
   justify-content: center;
 }
 
-.login,
-.register {
-  height: 100dvh;
-}
-
 #dashBtn {
   display: inline;
 }
@@ -315,7 +310,6 @@ a {
   height: 500px;
   margin: auto;
   margin-top: 15px;
-  width: 100%;
   margin: 0;
   position: relative;
   text-align: center;
@@ -526,6 +520,54 @@ a {
   color: white;
 }
 
+.login {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.login h1 {
+  margin-bottom: 20px;
+}
+
+.login form {
+  margin-bottom: 20px;
+}
+
+.login form input[type="text"],
+.login form input[type="password"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login form input[type="submit"] {
+  background-color: rgb(0, 15, 245);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.login form input[type="submit"]:hover {
+  background-color: rgb(0, 12, 196);
+}
+
+.login a {
+  color: rgb(0, 15, 245);
+  text-decoration: none;
+}
+
+.login a:hover {
+  text-decoration: underline;
+}
+
 main {
   width: 100%;
   max-width: 800px;
@@ -565,4 +607,58 @@ main {
   height: auto;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.inputs {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: rgb(0, 15, 245);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(0, 12, 196);
+}
+
+.containers {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin: 2%;
+}
+
+/* Cookie Modal Styles */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  text-align: center;
 }

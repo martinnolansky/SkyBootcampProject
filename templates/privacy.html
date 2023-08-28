@@ -1,0 +1,33 @@
+{% extends "base.html"%} {% block content %}
+
+<h2 class="coursesMainHead">Privacy Policy</h2>
+
+<div class="containers" style="height: 100dvh">
+  <h2 style="margin-bottom: 10px">Introduction</h2>
+  <p style="margin-bottom: 50px">
+    Welcome to Sky Bootcamp Project Group 1! This Privacy Policy explains how we
+    collect, use, disclose, and safeguard your personal information when you use
+    our website. By using our website, you consent to the practices described in
+    this policy.
+  </p>
+
+  <h2 style="margin-bottom: 10px">Information We Collect</h2>
+  <p>
+    <strong>Personal Information:</strong> When you create an account, we may
+    collect certain personal information such as your name, email address, and
+    any other information you provide during the registration process.
+  </p>
+  <p style="margin-bottom: 50px">
+    <strong>Usage Data:</strong> We may automatically collect certain
+    information about your device, browsing actions, and patterns. This may
+    include IP addresses, browser type, operating system, and browsing history.
+  </p>
+
+  <h2 style="margin-bottom: 10px">Contact Us</h2>
+  <p>
+    If you have any questions about this Privacy Policy, please
+    <a href="{{ url_for('contact') }}">contact us.</a>
+  </p>
+</div>
+
+{% endblock %}
