@@ -140,7 +140,9 @@ h1,
 h2,
 h3,
 p,
-button {
+button,
+li,
+ul {
   font-family: skyText;
 }
 
