@@ -1,0 +1,23 @@
+{% extends "base.html"%} {% block content %}
+<h2 class="coursesMainHead">Google Lighthouse Reports</h2>
+
+<section class="containerTop">
+  <div style="height: 75dvh">
+    <div class="cards-container">
+      <embed
+        src="/static/HomepageLighthouseReport.pdf"
+        width="700"
+        height="600"
+        type="application/pdf"
+      />
+      <embed
+        src="/static/BusinessAnalysisLighthouseReport.pdf"
+        width="700"
+        height="600"
+        type="application/pdf"
+      />
+    </div>
+  </div>
+</section>
+
+{% endblock %}

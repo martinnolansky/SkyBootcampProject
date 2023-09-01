@@ -71,6 +71,10 @@ def home():
 def about():
    return render_template('about.html')
 
+@app.route('/test')
+def test():
+   return render_template('test.html')
+
 @app.route('/contact')
 def contact():
    return render_template('contact.html')
