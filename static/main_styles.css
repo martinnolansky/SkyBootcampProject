@@ -664,3 +664,14 @@ input[type="submit"]:hover {
   max-width: 400px;
   text-align: center;
 }
+
+.contentBG {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(40, 26, 128, 1) 30%,
+    rgba(40, 26, 128, 1) 74%,
+    rgba(40, 26, 128, 1) 100%
+  );
+  color: white;
+}
