@@ -35,7 +35,7 @@ class User(db.Model, UserMixin):
 # Flask form to allow user to register
 class RegisterForm(FlaskForm):
     firstname = StringField(validators=[
-                           InputRequired(), Length(min=2, max=20)], render_kw={"placeholder": "Firstname"})
+                           InputRequired(), Length(min=2, max=20)], render_kw={"placeholder": "First Name"})
     lastname = StringField(validators=[
                            InputRequired(), Length(min=2, max=20)], render_kw={"placeholder": "Surname"})
     username = StringField(validators=[
