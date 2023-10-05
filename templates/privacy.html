@@ -1,8 +1,10 @@
-{% extends "base.html"%} {% block content %}
-
+{% extends "base.html" %} {% block content %}
+<!-- Privacy Policy Section -->
 <h2 class="coursesMainHead">Privacy Policy</h2>
 
+<!-- Privacy Policy Container -->
 <div class="containers" style="height: 100dvh">
+  <!-- Introduction -->
   <h2 style="margin-bottom: 10px">Introduction</h2>
   <p style="margin-bottom: 50px">
     Welcome to Sky Bootcamp Project Group 1! This Privacy Policy explains how we
@@ -11,6 +13,7 @@
     this policy.
   </p>
 
+  <!-- Information We Collect -->
   <h2 style="margin-bottom: 10px">Information We Collect</h2>
   <p>
     <strong>Personal Information:</strong> When you create an account, we may
@@ -23,11 +26,11 @@
     include IP addresses, browser type, operating system, and browsing history.
   </p>
 
+  <!-- Contact Us -->
   <h2 style="margin-bottom: 10px">Contact Us</h2>
   <p>
     If you have any questions about this Privacy Policy, please
     <a href="{{ url_for('contact') }}">contact us.</a>
   </p>
 </div>
-
 {% endblock %}

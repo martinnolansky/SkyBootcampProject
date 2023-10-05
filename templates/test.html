@@ -1,15 +1,20 @@
-{% extends "base.html"%} {% block content %}
+{% extends "base.html" %} {% block content %}
+<!-- Google Lighthouse Reports Section -->
 <h2 class="coursesMainHead">Google Lighthouse Reports</h2>
 
+<!-- Container for Google Lighthouse Reports -->
 <section class="containerTop">
   <div style="height: 75dvh">
+    <!-- Container for Lighthouse Reports -->
     <div class="cards-container">
+      <!-- Embed Google Lighthouse Report for Homepage -->
       <embed
         src="/static/HomepageLighthouseReport.pdf"
         width="700"
         height="600"
         type="application/pdf"
       />
+      <!-- Embed Google Lighthouse Report for Business Analysis -->
       <embed
         src="/static/BusinessAnalysisLighthouseReport.pdf"
         width="700"
@@ -19,5 +24,4 @@
     </div>
   </div>
 </section>
-
 {% endblock %}

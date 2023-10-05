@@ -1,74 +1,116 @@
-{% extends "base.html"%} {% block content %} {% if current_user.is_authenticated
-%}
+{% extends "base.html" %} {% block content %} {% if
+current_user.is_authenticated %}
+<!-- Dashboard Welcome Section -->
 <section class="containerTop">
-  <h2 class="coursesMainHead">Hi {{ current_user.firstname }}, welcome to your dashboard!</h2>
+  <h2 class="coursesMainHead">
+    Hi {{ current_user.firstname }}, welcome to your dashboard!
+  </h2>
   <div class="cards-container">
-    <p class="HomeIntro">Welcome to our comprehensive online platform dedicated to learning Agile and Business Analysis
-      fundamentals! Our user-friendly dashboard provides you with easy access to a wealth of knowledge and resources,
-      tailored to help you master the principles and practices that drive successful project management and business
-      analysis. From interactive modules to insightful articles, our dashboard is designed to accommodate learners of
-      all levels — whether you are a beginner looking to grasp the basics or a professional seeking to enhance your
-      skills.
-      <br>
-      <br>
-      Navigate seamlessly through the intuitive interface, track your progress, and engage with a vibrant community of
-      learners and experts. Embark on a transformative learning journey as you delve into Agile methodologies,
-      understanding how to adapt and respond to change efficiently. Dive deep into the realm of Business Analysis,
-      acquiring the tools to analyze business needs and bridge the gap between stakeholders and project teams. Join us
-      on this educational adventure and unlock the potential of Agile and Business Analysis to drive innovation and
-      success. Your journey starts here on our dynamic and engaging dashboard!</p>
-    <img src="/static/learning.jpg" alt="Learning Home Page Logo" class="learningHomeImg ">
-  </div>
-
+    <p class="HomeIntro">
+      Welcome to our comprehensive online platform dedicated to learning Agile
+      and Business Analysis fundamentals! Our user-friendly dashboard provides
+      you with easy access to a wealth of knowledge and resources, tailored to
+      help you master the principles and practices that drive successful project
+      management and business analysis. From interactive modules to insightful
+      articles, our dashboard is designed to accommodate learners of all levels
+      — whether you are a beginner looking to grasp the basics or a professional
+      seeking to enhance your skills.
+      <br />
+      <br />
+      Navigate seamlessly through the intuitive interface, track your progress,
+      and engage with a vibrant community of learners and experts. Embark on a
+      transformative learning journey as you delve into Agile methodologies,
+      understanding how to adapt and respond to change efficiently. Dive deep
+      into the realm of Business Analysis, acquiring the tools to analyze
+      business needs and bridge the gap between stakeholders and project teams.
+      Join us on this educational adventure and unlock the potential of Agile
+      and Business Analysis to drive innovation and success. Your journey starts
+      here on our dynamic and engaging dashboard!
+    </p>
+    <img
+      src="/static/learning.jpg"
+      alt="Learning Home Page Logo"
+      class="learningHomeImg"
+    />
   </div>
 </section>
 
-
-
-
+<!-- Your Courses Section -->
 <section class="containerTop">
-  <h2 class="coursesMainHead"
-    style="color: white; background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(40,26,128,1) 30%, rgba(40,26,128,1) 74%, rgba(40,26,128,1) 100%);">
-    Your Courses</h2>
+  <h2
+    class="coursesMainHead"
+    style="
+      color: white;
+      background: linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(40, 26, 128, 1) 30%,
+        rgba(40, 26, 128, 1) 74%,
+        rgba(40, 26, 128, 1) 100%
+      );
+    "
+  >
+    Your Courses
+  </h2>
   <div class="cards-container">
-
-    <a href="{{ url_for('agile') }}" style="text-decoration: none;" class="courses">
+    <!-- Agile Fundamentals Course Card -->
+    <a
+      href="{{ url_for('agile') }}"
+      style="text-decoration: none"
+      class="courses"
+    >
       <div class="card">
-        <img src="/static/agile.jpg" alt="Agile Course Logo" class="card_img ">
+        <img src="/static/agile.jpg" alt="Agile Course Logo" class="card_img" />
         <h2>Agile Fundamentals</h2>
-        <p>Discover the power of Agile methodologies in our comprehensive course that introduces you to the principles
-          reshaping project management. In this immersive learning experience, you'll gain a solid foundation in Agile
-          practices, exploring iterative development, adaptive planning, and collaborative teamwork.
-          <br>
-          <br>
-          Through a
-          combination of interactive modules, real-world examples and hands-on exercises, you'll learn to embrace
-          change and deliver value to clients and stakeholders more effectively. Whether you're a project manager, a
-          developer, or anyone involved in product delivery, this course equips you with the skills needed to navigate
-          the ever-evolving landscape of business. Join us now to master the art of Agile and revolutionise the way you
-          approach projects!</p>
+        <p>
+          Discover the power of Agile methodologies in our comprehensive course
+          that introduces you to the principles reshaping project management. In
+          this immersive learning experience, you'll gain a solid foundation in
+          Agile practices, exploring iterative development, adaptive planning,
+          and collaborative teamwork.
+          <br />
+          <br />
+          Through a combination of interactive modules, real-world examples and
+          hands-on exercises, you'll learn to embrace change and deliver value
+          to clients and stakeholders more effectively. Whether you're a project
+          manager, a developer, or anyone involved in product delivery, this
+          course equips you with the skills needed to navigate the ever-evolving
+          landscape of business. Join us now to master the art of Agile and
+          revolutionise the way you approach projects!
+        </p>
       </div>
     </a>
 
-    <a href="{{ url_for('business_analysis') }}" style="text-decoration: none;" class="courses">
+    <!-- Business Analysis Course Card -->
+    <a
+      href="{{ url_for('business_analysis') }}"
+      style="text-decoration: none"
+      class="courses"
+    >
       <div class="card">
-        <img src="/static/business_analysis.jpg" alt="Business Analysis Logo" class="card_img ">
+        <img
+          src="/static/business_analysis.jpg"
+          alt="Business Analysis Logo"
+          class="card_img"
+        />
         <h2>Business Analysis</h2>
-        <p>Unlock the gateway to effective project communication and decision-making with our Business Analysis
-          fundamentals course. This in-depth curriculum is tailored to empower aspiring and seasoned professionals alike
-          with the knowledge and techniques needed to bridge the gap between business needs and technical solutions.
-          <br>
-          <br>
-          Immerse yourself in the world of requirements elicitation, analysis, and documentation, gaining the skills
-          to
-          create comprehensive project plans and ensure successful project outcomes. Through real-world case studies and
-          interactive lessons, you'll learn to facilitate communication between stakeholders, extract crucial
-          information, and drive business growth through informed decision-making.</p>
+        <p>
+          Unlock the gateway to effective project communication and
+          decision-making with our Business Analysis fundamentals course. This
+          in-depth curriculum is tailored to empower aspiring and seasoned
+          professionals alike with the knowledge and techniques needed to bridge
+          the gap between business needs and technical solutions.
+          <br />
+          <br />
+          Immerse yourself in the world of requirements elicitation, analysis,
+          and documentation, gaining the skills to create comprehensive project
+          plans and ensure successful project outcomes. Through real-world case
+          studies and interactive lessons, you'll learn to facilitate
+          communication between stakeholders, extract crucial information, and
+          drive business growth through informed decision-making.
+        </p>
       </div>
     </a>
   </div>
 </section>
-
-
-
 {% endif %} {% endblock %}

@@ -1,9 +1,10 @@
-{% extends "base.html"%} {% block content %}
+{% extends "base.html" %} {% block content %}
+<!-- Top Navigation Bar -->
 <div class="topnav">
   <span><b>30 days free when you sign up for an annual membership.</b></span>
 </div>
 
-
+<!-- Header Section -->
 <section class="containerTop" style="border-bottom: 5px solid black">
   <div class="containerImg">
     <img src="/static/2222.gif" alt="Header Image" class="landingImg" />
@@ -13,104 +14,163 @@
   </div>
 </section>
 
-
+<!-- Who are we Section -->
 <section class="containerTop">
   <h2 class="coursesMainHead">Who are we?</h2>
   <div class="cards-container">
-    <p class="HomeIntro">We are team Sprints and Giggles! We are a combination of graduates which collaborate
-      in an agile manner to create a website that demonstrates what we have learned throughout the course of the bootcamp.
-      We also aimed to demonstrate such knowledge by applying it to the project overall and the website development. </p>
-    <img src="/static/learning.jpg" alt="Learning Home Page Logo" class="learningHomeImg ">
-  </div>
-
+    <p class="HomeIntro">
+      We are team Sprints and Giggles! We are a combination of graduates which
+      collaborate in an agile manner to create a website that demonstrates what
+      we have learned throughout the course of the bootcamp. We also aimed to
+      demonstrate such knowledge by applying it to the project overall and the
+      website development.
+    </p>
+    <img
+      src="/static/learning.jpg"
+      alt="Learning Home Page Logo"
+      class="learningHomeImg"
+    />
   </div>
 </section>
 
-
-
-
-<section class="containerTop"
-  style="background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(40,26,128,1) 30%, rgba(40,26,128,1) 74%, rgba(40,26,128,1) 100%);">
-  <h2 class="coursesMainHead" style="color: white;">Our Courses</h2>
+<!-- Our Courses Section -->
+<section
+  class="containerTop"
+  style="
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(40, 26, 128, 1) 30%,
+      rgba(40, 26, 128, 1) 74%,
+      rgba(40, 26, 128, 1) 100%
+    );
+  "
+>
+  <h2 class="coursesMainHead" style="color: white">Our Courses</h2>
   <div class="cards-container">
+    <!-- Agile Fundamentals Course Card -->
     <div class="card">
-      <img src="/static/agile.jpg" alt="Agile Course Logo" class="card_img ">
+      <img src="/static/agile.jpg" alt="Agile Course Logo" class="card_img" />
       <h2>Agile Fundamentals</h2>
-      <p>The agile course aims to provide a comprehensive overview of the agile approach, manifesto,
-         frameworks and processes.
-        The course is recommended for anyone wanting to know about agile and wanting to gain a basic understanding of its processes with
-        no pre-existing knowledge of the agile topic.
-        </p>
+      <p>
+        The agile course aims to provide a comprehensive overview of the agile
+        approach, manifesto, frameworks and processes. The course is recommended
+        for anyone wanting to know about agile and wanting to gain a basic
+        understanding of its processes with no pre-existing knowledge of the
+        agile topic.
+      </p>
     </div>
+    <!-- Business Analysis Course Card -->
     <div class="card">
-      <img src="/static/business_analysis.jpg" alt="Business Analysis Logo" class="card_img ">
+      <img
+        src="/static/business_analysis.jpg"
+        alt="Business Analysis Logo"
+        class="card_img"
+      />
       <h2>Business Analysis</h2>
-      <p>This course aims to provide an overview of business, stakeholder, requirement analysis
-        as well as a terms of reference. This course is recommended for anyone wanting to develop an understanding of the role of 
-        the business analyst within an organisation. There is a multiple choice test available at the end of the course to assess your
-        understanding of the course. 
+      <p>
+        This course aims to provide an overview of business, stakeholder,
+        requirement analysis as well as a terms of reference. This course is
+        recommended for anyone wanting to develop an understanding of the role
+        of the business analyst within an organisation. There is a multiple
+        choice test available at the end of the course to assess your
+        understanding of the course.
       </p>
     </div>
   </div>
 </section>
 
-<!-- About us section in home page -->
+<!-- About Us Section -->
 <section class="containerTop">
   <h2 class="coursesMainHead">About Us</h2>
   <div class="cards-container-about">
+    <!-- Team Member Cards -->
     <div class="card">
-      <img src="/static/MicrosoftTeams-image.png" alt="Agile Course Logo" class="card_img ">
+      <img
+        src="/static/MicrosoftTeams-image.png"
+        alt="Martin Nolan"
+        class="card_img"
+      />
       <h2>Martin Nolan</h2>
-      <p>Your Agile Sherpa. With a decade immersed in the tech trenches, Martin doesn't just know Agile - he lives it.</p>
-
+      <p>
+        Your Agile Sherpa. With a decade immersed in the tech trenches, Martin
+        doesn't just know Agile - he lives it.
+      </p>
     </div>
+
     <div class="card">
-      <img src="/static/jemima.png" alt="Agile Course Logo" class="card_img ">
+      <img src="/static/jemima.png" alt="Jemima Hsu"" class="card_img" />
       <h2>Jemima Hsu</h2>
-      <p>Developing as a developer, Agile appreciator. With a commitment to growth and a keen eye for Agile's finesse, I am poised to shine brightly on the development horizon</p>
-  
+      <p>
+        Jemima is a developer and Agile appreciator. With a commitment to growth
+        and a keen eye for Agile's finesse, I am poised to shine brightly on the
+        development horizon.
+      </p>
     </div>
-    <div class="card">
-      <img src="/static/lidia.png" alt="Agile Course Logo" class="card_img ">
-      <h2>Lidia Touileb</h2>
-      <p>On a journey of becoming a competent software developer, adopting an agile mindset and applying agile practices to create a better future.</p>
 
-    </div>
     <div class="card">
-      <img src="/static/Sam.jpg" alt="Agile Course Logo" class="card_img ">
+      <img src="/static/lidia.png" alt="Lidia Touileb" class="card_img" />
+      <h2>Lidia Touileb</h2>
+      <p>
+        On a journey of becoming a competent software developer, adopting an
+        agile mindset and applying agile practices to create a better future.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="/static/Sam.jpg" alt="Samantha Cargill" class="card_img" />
       <h2>Samantha Cargill</h2>
-      <p>Fuelling My Passion for Innovation: 
-        In the world of software development, Sam is the extra sprinkle of agility and the secret sauce of enthusiasm that turns every project into a delicious success story." </p>
-   
+      <p>
+        Fuelling My Passion for Innovation: "In the world of software
+        development, I'm the extra sprinkle of agility and the secret sauce of
+        enthusiasm that turns every project into a delicious success story."
+      </p>
     </div>
+
     <div class="card">
-      <img src="/static/kaan.png" alt="Agile Course Logo" class="card_img ">
+      <img src="/static/kaan.png" alt="Kaan Evcimen" class="card_img" />
       <h2>Kaan Evcimen</h2>
-      <p>I love group work and working agile - With a passion for teamwork and Agile methodologies, I thrive in the collaborative dance of group projects.</p>
+      <p>
+        I love group work and working agile — with a passion for teamwork and
+        Agile methodologies, I thrive in the collaborative dance of group
+        projects.
+      </p>
     </div>
+
     <div class="card">
-      <img src="/static/1693212411852.jpg" alt="Agile Course Logo" class="card_img ">
+      <img
+        src="/static/1693212411852.jpg"
+        alt="Michael Krestas"
+        class="card_img"
+      />
       <h2>Michael Krestas</h2>
-      <p><span>🚀</span>I'm Michael, an Agile developer dedicated to crafting software solutions that adapt and excel in a fast-paced digital landscape. My passion lies in
-          collaborating with teams to deliver top-notch, flexible products that meet evolving demands.</p>
+      <p>
+        <span>🚀</span>I'm Michael, an Agile developer dedicated to crafting
+        software solutions that adapt and excel in a fast-paced digital
+        landscape. My passion lies in collaborating with teams to deliver
+        top-notch, flexible products that meet evolving demands.
+      </p>
     </div>
+
     <div class="card">
-      <img src="/static/Ben.png" alt="Agile Course Logo" class="card_img ">
+      <img src="/static/Ben.png" alt="Benjamin Tossel" class="card_img" />
       <h2>Benjamin Tossell</h2>
-      <p>I'm Benjamin, a dedicated web designer with a flair for crafting digital experiences that leave a lasting impact. My journey into the world of design started 1 week ago, and I've been passionately shaping the online landscape ever since.</p>
-    
+      <p>
+        I'm Benjamin, a dedicated web designer with a flair for crafting digital
+        experiences that leave a lasting impact. My journey into the world of
+        design started one week ago, and I've been passionately shaping the
+        online landscape ever since.
+      </p>
     </div>
-   
   </div>
 </section>
 
-<!-- Chat button that opens pop up below -->
+<!-- Chat Button Section -->
 <div class="chatBtn">
   <button class="chatButton" onclick="openForm()">Chat</button>
 </div>
 
-<!-- Chat popup with message box, submit and close button -->
-
+<!-- Chat Popup Section -->
 <div class="chatPopup" id="chatForm">
   <form action="/" class="formContainer">
     <div class="flexContainer">
@@ -120,18 +180,25 @@
       </button>
     </div>
     <label for="msg"><b>Needing help?</b></label>
-    <textarea placeholder="Type your message here..." name="msg" required></textarea>
+    <textarea
+      placeholder="Type your message here..."
+      name="msg"
+      required
+    ></textarea>
     <button type="submit" class="buttons sendBtn">Send</button>
   </form>
 </div>
 
- <!-- Cookie Modal -->
- <div class="modal-overlay" id="cookieModal">
+<!-- Cookie Modal Section -->
+<div class="modal-overlay" id="cookieModal">
   <div class="modal">
-      <h2 style="margin: 20px;">Cookie Policy</h2>
-      <p style="margin: 20px;">We use cookies to improve your experience on our website. By continuing to browse, you agree to our use of cookies.</p>
-      <button id="acceptCookies" style="margin: 20px;">Accept Cookies</button>
-      <button id="rejectCookies" style="margin: 20px;">Reject Cookies</button>
+    <h2 style="margin: 20px">Cookie Policy</h2>
+    <p style="margin: 20px">
+      We use cookies to improve your experience on our website. By continuing to
+      browse, you agree to our use of cookies.
+    </p>
+    <button id="acceptCookies" style="margin: 20px">Accept Cookies</button>
+    <button id="rejectCookies" style="margin: 20px">Reject Cookies</button>
   </div>
 </div>
 {% endblock %}

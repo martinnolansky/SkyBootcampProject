@@ -1,29 +1,31 @@
-{% extends "base.html"%}
+{% extends "base.html" %}
 
 {% block content %}
+  <!-- Login Section -->
+  <section class="containerTop">
+    <div style="height: 75dvh;">
+      <!-- Cards Container -->
+      <div class="cards-container">
+        <!-- Login Image -->
+        <img src="/static/login.jpg" alt="Login Image" class="HomeIntro" style="width: 500px;">
+        <!-- Login Form -->
+        <div class="login">
+          <h1>Login</h1>
+          <!-- Login Form Submission -->
+          <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            {{ form.username }}
+            </br>
+            {{ form.password }}
+            </br>
+            {{ form.submit }}
+            </br>
+          </form>
 
-<section class="containerTop">
-  <div style="height:75dvh;">
-  <div class="cards-container">
-    <img src="/static/login.jpg" alt="Login Image" class="HomeIntro" style="width: 500px;">
-    <div class="login">
-      <h1>Login</h1>
-      <form method="POST" action="">
-        {{ form.hidden_tag() }}
-        {{ form.username }}
-        </br>
-        {{ form.password }}
-        </br>
-        {{ form.submit }}
-        </br>
-      </form>
-
-      <a href="{{ url_for('register') }}">Don't have an account? Sign Up</a>
+          <!-- Registration Link -->
+          <a href="{{ url_for('register') }}">Don't have an account? Sign Up</a>
+        </div>
+      </div>
     </div>
-</div>
-  </div>
-
-  </div>
-</section>
-
+  </section>
 {% endblock %}

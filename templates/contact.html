@@ -1,14 +1,26 @@
-{% extends "base.html"%} {% block content %}
-
+{% extends "base.html" %} {% block title %} Contact Us {% endblock %} {% block
+content %}
 <h2 class="coursesMainHead">Contact Us</h2>
 
 <div class="containers">
   <form action="/">
     <label for="fname">First Name</label>
-    <input class="inputs" type="text" id="fname" name="firstname" placeholder="Your name">
+    <input
+      class="inputs"
+      type="text"
+      id="fname"
+      name="firstname"
+      placeholder="Your name"
+    />
 
     <label for="lname">Last Name</label>
-    <input class="inputs" type="text" id="lname" name="lastname" placeholder="Your surname">
+    <input
+      class="inputs"
+      type="text"
+      id="lname"
+      name="lastname"
+      placeholder="Your surname"
+    />
 
     <label for="topics">Topic</label>
     <select class="inputs" id="topics" name="topic">
@@ -20,11 +32,15 @@
     </select>
 
     <label for="subject">Subject</label>
-    <textarea class="inputs" id="subject" name="subject" placeholder="How can we help?" style="height:200px"></textarea>
+    <textarea
+      class="inputs"
+      id="subject"
+      name="subject"
+      placeholder="How can we help?"
+      style="height: 200px"
+    ></textarea>
 
-    <input class="inputs" type="submit" value="Submit">
+    <input class="inputs" type="submit" value="Submit" />
   </form>
 </div>
-
-
 {% endblock %}

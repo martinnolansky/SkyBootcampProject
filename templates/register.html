@@ -1,99 +1,94 @@
-{% extends "base.html"%}
+{% extends "base.html" %}
 
 {% block content %}
+  <!-- Registration Section -->
+  <section class="containerTop">
+    <div style="height: 75dvh;">
+      <!-- Registration Container -->
+      <div class="cards-container">
+        <!-- Registration Image -->
+        <img src="/static/register.png" alt="Login Image" class="HomeIntro" style="width: 500px;">
+        
+        <!-- Registration Form -->
+        <div class="login">
+          <h1>Register</h1>
+          <!-- Registration Form Submission -->
+          <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            {{ form.firstname }}
+            </br>
+            {{ form.lastname }}
+            </br>
+            {{ form.username }}
+            </br>
+            {{ form.password }}
+            </br>
+            {{ form.submit }}
+            </br>
+          </form>
 
-<section class="containerTop">
-  <div style="height: 75dvh;">
-    <div class="cards-container">
-      <img src="/static/register.png" alt="Login Image" class="HomeIntro" style="width: 500px;">
-      <div class="login">
-        <h1>Register</h1>
-        <form method="POST" action="">
-          {{ form.hidden_tag() }}
-          {{ form.firstname }}
-          </br>
-          {{ form.lastname }}
-          </br>
-          {{ form.username }}
-        </br>
-          {{ form.password }}
-  
-           
+          <!-- Password Strength Indicator -->
+          <div id="password-strength" class="password-strength"></div>
 
-          </br>
-          {{ form.submit}}
-          </br>
-        </form>
-<div id="password-strength" class="password-strength"></div> 
-        <a href="{{ url_for('login') }}">Already got an account? Log In</a>
+          <!-- Login Link -->
+          <a href="{{ url_for('login') }}">Already got an account? Log In</a>
+        </div>
       </div>
     </div>
-  </div>
-  <style>
-  
-    .password-strength {
-      padding-top: 10px;
-      font-weight: bold;
-    }
-    
-    .weak {
-      color: red;
-    }
-    
-    .moderate {
-      color: orange;
-    }
-    
-    .strong {
-      color: green;
-    }
-  </style>
-  
-  <script>
-    
-    const passwordInput = document.getElementById('password');
-    const passwordStrength = document.getElementById('password-strength');
-  
-    passwordInput.addEventListener('input', () => {
-      const password = passwordInput.value;
-      const strength = calculatePasswordStrength(password);
-      const strengthText = getStrengthText(strength);
-  
-      passwordStrength.textContent = strengthText;
-      passwordStrength.className = 'password-strength ' + strengthText.toLowerCase();
-    });
-  
-    function calculatePasswordStrength(password) {
-      
-      if (password.length >= 8 && /[a-zA-Z]/.test(password) && /[0-9]/.test(password) && /[^a-zA-Z0-9]/.test(password)) {
-        return 100; // Strong
-      } else if (password.length >= 8 && (/[a-zA-Z]/.test(password) || /[0-9]/.test(password))) {
-        return 70; // Moderate
-      } else {
-        return 30; // Weak
+
+    <!-- Password Strength Styling -->
+    <style>
+      .password-strength {
+        padding-top: 10px;
+        font-weight: bold;
       }
-    }
-  
-    function getStrengthText(strength) {
-      if (strength >= 80) {
-        return 'Strong Password';
-      } else if (strength >= 50) {
-        return 'Moderate Password';
-      } else {
-        return 'Weak Password';
+
+      .weak {
+        color: red;
       }
-    }
-  </script>
-  </div>
 
+      .moderate {
+        color: orange;
+      }
 
-</section>
+      .strong {
+        color: green;
+      }
+    </style>
 
+    <!-- Password Strength Script -->
+    <script>
+      const passwordInput = document.getElementById('password');
+      const passwordStrength = document.getElementById('password-strength');
+
+      passwordInput.addEventListener('input', () => {
+        const password = passwordInput.value;
+        const strength = calculatePasswordStrength(password);
+        const strengthText = getStrengthText(strength);
+
+        passwordStrength.textContent = strengthText;
+        passwordStrength.className = 'password-strength ' + strengthText.toLowerCase();
+      });
+
+      function calculatePasswordStrength(password) {
+        if (password.length >= 8 && /[a-zA-Z]/.test(password) && /[0-9]/.test(password) && /[^a-zA-Z0-9]/.test(password)) {
+          return 100; // Strong
+        } else if (password.length >= 8 && (/[a-zA-Z]/.test(password) || /[0-9]/.test(password))) {
+          return 70; // Moderate
+        } else {
+          return 30; // Weak
+        }
+      }
+
+      function getStrengthText(strength) {
+        if (strength >= 80) {
+          return 'Strong Password';
+        } else if (strength >= 50) {
+          return 'Moderate Password';
+        } else {
+          return 'Weak Password';
+        }
+      }
+    </script>
+  </section>
 {% endblock %}
-
-
-       
-
-  
-
-  
